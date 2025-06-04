@@ -38,10 +38,10 @@ def limpar_entrada():
     else:
         instrucao.configure(text="Digite um número decimal")
 
-    if (entrada.get() == "" and resultado.cget("text") == ""):
+    if (entrada.get() == "" and resultado_label.cget("text") == ""):
         return
     entrada.delete(0, ctk.END)
-    resultado.configure(text="")
+    resultado_label.configure(text="")
     # Muda o foco para o container geral para aparecer o placeholder da entrada
     app.focus_set()
 
@@ -162,7 +162,7 @@ def decimal_para_binario(num_str):
 
 # ------------------ Função de Exibição de Resultado ------------------
 # Exibe o resultado da conversão de acordo com a opção escolhida
-def converter():
+def executa_conversao():
     entrada_texto = entrada.get().replace(",", ".").strip()
     tipo = escolha.get()
     cor = "#3b8ed0"
@@ -232,7 +232,7 @@ btn_limpar = ctk.CTkButton(
 )
 
 btn_converter = ctk.CTkButton(
-    app, text="Converter", command=converter,
+    app, text="Converter", command=executa_conversao,
     width=200, height=40, corner_radius=20, fg_color="#3b8ed0", 
     hover_color="#439de6", text_color="white", 
     font=(font_style, 18)
@@ -244,7 +244,7 @@ frame_resultado = ctk.CTkScrollableFrame(
     scrollbar_button_hover_color="#a95ac4"
 )
 
-resultado = ctk.CTkLabel(
+resultado_label = ctk.CTkLabel(
     frame_resultado, text="", text_color="#3b8ed0",
     font=(font_style, 24, "bold"), anchor="center", width=500, 
     height=50, wraplength=450
@@ -277,7 +277,7 @@ frame_entrada.grid()
 entrada.grid(pady=5, column=0, row=1)
 
 # Aciona a função converter ao pressionar enter
-entrada.bind("<Return>", lambda event: converter())
+entrada.bind("<Return>", lambda event: executa_conversao())
 
 # Adiciona o botão de limpar na tela
 btn_limpar.grid(pady=5, padx=10, column=1, row=1)
@@ -292,7 +292,7 @@ titulo_resultado.grid(ipady=5, ipadx=10)
 frame_resultado.grid(ipadx=5)
 
 # Adiciona o Label do Resultado na tela
-resultado.grid(ipady=10)
+resultado_label.grid(ipady=10)
 
 # Executa a janela/aplicação
 app.mainloop()
