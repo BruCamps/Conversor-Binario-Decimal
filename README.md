@@ -1,6 +1,6 @@
 # 🔁 Conversor Binário-Decimal em Python
 
-Este projeto é uma **atividade prática da disciplina de Princípios de Programação**, cujo objetivo é exercitar a lógica de programação com Python, desenvolver habilidades com manipulação numérica e praticar a criação de interfaces gráficas com a biblioteca **Tkinter**, porém dei preferência por utilizar a **[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)**, que é derivada do Tkinter, pelo fato de proporcionar mais opções de customização de elementos e da interface.
+Este projeto é uma **atividade prática da disciplina de Princípios de Programação**, cujo objetivo é exercitar a lógica de programação com **Python**, desenvolver habilidades com manipulação numérica e praticar a criação de interfaces gráficas com a biblioteca **Tkinter**, porém dei preferência por utilizar a **[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)**, que é derivada do Tkinter, pelo fato de proporcionar mais opções de customização de elementos e da interface.
 
 ---
 
@@ -34,7 +34,7 @@ A aplicação tem uma interface simples, intuitiva e funcional construída com C
 
 ## 🚀 Tecnologias utilizadas
 
-- **Python 3.10+**
+- **[Python 3.10+](https://www.python.org/downloads/)**
 - **[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)** — para interface gráfica moderna
 
 ---
@@ -63,7 +63,7 @@ A aplicação tem uma interface simples, intuitiva e funcional construída com C
 ### Binário para decimal:
 
 ```python
-  # Entrada: 101,11 -> A vírgula é convertida em ponto para as conversões
+  # Entrada: 101,11
   # Saída: 5.75
 ```
 
@@ -76,14 +76,14 @@ A aplicação tem uma interface simples, intuitiva e funcional construída com C
 
 
 ## ⚠️ Regras de validação
-- Somente um único separador decimal (. ou ,) é aceito.
-- Números binários devem conter apenas 0, 1, e opcionalmente ..
-- Números decimais podem conter qualquer dígito.
+- Somente um único separador decimal (. ou ,) é aceito
+- Números binários devem conter apenas os números 0 e 1
+- Números decimais podem conter qualquer número
 
 ## 📌 Observações
-- Este projeto foi desenvolvido exclusivamente para fins acadêmicos e de aprendizado.
-- Ele não tem como foco precisão científica para grandes casas decimais ou suporte a notação científica.
-- O conversor fracionário é limitado a 10 dígitos binários na parte decimal para evitar loops infinitos.
+- Este projeto foi desenvolvido exclusivamente para fins acadêmicos e de aprendizado
+- Ele não tem como foco precisão científica para grandes casas decimais ou suporte a notação científica
+- O conversor fracionário é limitado a 10 dígitos binários na parte decimal para evitar loops infinitos ou números muito grandes
 
 ---
 
